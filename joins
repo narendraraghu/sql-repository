@@ -1,0 +1,135 @@
+ 1.	create table country
+	(
+	con_code NUMBER(3),
+	con_name varchar2(25),
+	continent varchar(25)
+	);
+
+2.  INSERT into country values('1','India','Asia');
+	INSERT into country values('2','Australia','Australia');
+	INSERT into country values('3','America','USA');
+	INSERT into country values('4','Jamaika','South Africa');
+
+3.
+create table states
+	(
+	s_code NUMBER(3),
+	con_code NUMBER(3),
+	s_name varchar2(25),
+	 details varchar2(2500)
+	);
+
+	Alter table states ALTER Column details varchar(2500) [NOT] NULL
+	ALTER TABLE states ALTER COLUMN details VARCHAR (5000) NOT NULL;
+	
+4.  INSERT into states values(1,1,'Maharastra','Maharashtra, a state spanning west-central India, is best known for its fast-paced capital, Mumbai (formerly Bombay). This sprawling metropolis is the seat of the Bollywood film industry. It also has sites like the British Raj-era Gateway of India monument and cave temples at Elephanta Island. To the south is the rustic, beach-lined Konkan Coast. In the city of Pune, Aga Khan Palace is a memorial to Mahatma Gandhi');
+	INSERT into states values(2,1,'Madhya-Pradesh','Madhya Pradesh, a large state in central India, retains landmarks from eras throughout Indian history. Begun in the 10th century, its Hindu and Jain temples at Khajuraho are renowned for their carvings of erotic scenes, most prominently Kandariya Mahadeva, a temple with more than 800 sculptures. The eastern Bandhavgarh and Kanha national parks, noted Bengal tiger sanctuaries, offer guided safaris.');
+	INSERT into states values(3,2,'tasmania','Tasmania, an isolated island state off Australia’s south coast, is known for its vast, rugged wilderness areas, largely protected within parks and reserves. On the Tasman Peninsula, the 19th-century Port Arthur penal settlement is now an open-air museum. In Hobart, the port capital, Salamanca Places Georgian warehouses now house galleries and boutiques. Its Museum of Old and New Art has a contemporary edge');
+	INSERT into states values(4,2,'victoria','Victoria is a state in the south-east of Australia. Victoria is Australias most densely populated state and its second-most populous state overall.');
+	INSERT into states values(5,3,'texas','Texas is a large state in the southern U.S. with deserts, pine forest and the Rio Grande, a river that forms its border with Mexico. In its biggest city, Houston, the Museum of Fine Arts houses works by well-known Impressionist and Renaissance painters, while Space Center Houston offers interactive displays engineered by NASA. Austin, the capital, is known for its eclectic music scene and LBJ Presidential Library.');
+	INSERT into states values(6,3,'Hawaii','Hawaii, a U.S. state, is an isolated volcanic archipelago in the Central Pacific. Its islands are renowned for their rugged landscapes of cliffs, waterfalls, tropical foliage and beaches with gold, red, black and even green sands. Of the 6 main islands, Oahu has Hawaii biggest city and capital, Honolulu, home to crescent Waikiki Beach and Pearl Harbors WWII memorials.');
+	INSERT into states values(7,4,'Johannesburg','Johannesburg, South Africas biggest city and capital of Gauteng province, began as a 19th-century gold-mining settlement. Its sprawling Soweto township was once home to Nelson Mandela and Desmond Tutu. Mandelas former residence is now the Mandela House museum. Other Soweto museums that recount the struggle to end segregation include the somber Apartheid Museum and Constitution Hill, a former prison complex.');
+	INSERT into states values(8,4,'Port Elizabeth','Port Elizabeth is a city on Algoa Bay in South Africas Eastern Cape Province. A major port, its also known for its numerous beaches. The Donkin Heritage Trail takes in the Old Hill neighborhoods Victorian landmarks. Coastal boat tours spot whales and rare seabirds, while wildlife reserves outside the metropolitan area are home to elephants, rhinos and other big game.');
+
+	
+5. create table city
+	(
+	city_code NUMBER(3),
+	s_code NUMBER(3),
+	city_name varchar2(25),
+	 details varchar2(2500)
+	);
+	
+	INSERT into city values(1,1,'Mumbai','Mumbai, a state spanning west-central India, is best known for its fast-paced capital, Mumbai (formerly Bombay). This sprawling metropolis is the seat of the Bollywood film industry. It also has sites like the British Raj-era Gateway of India monument and cave temples at Elephanta Island. To the south is the rustic, beach-lined Konkan Coast. In the city of Pune, Aga Khan Palace is a memorial to Mahatma Gandhi');
+	INSERT into city values(2,1,'Pune','Maharashtra, a state spanning west-central India, is best known for its fast-paced capital, Mumbai (formerly Bombay). This sprawling metropolis is the seat of the Bollywood film industry. It also has sites like the British Raj-era Gateway of India monument and cave temples at Elephanta Island. To the south is the rustic, beach-lined Konkan Coast. In the city of Pune, Aga Khan Palace is a memorial to Mahatma Gandhi');
+	INSERT into city values(3,1,'Bhopal','Madhya Pradesh, a large state in central India, retains landmarks from eras throughout Indian history. Begun in the 10th century, its Hindu and Jain temples at Khajuraho are renowned for their carvings of erotic scenes, most prominently Kandariya Mahadeva, a temple with more than 800 sculptures. The eastern Bandhavgarh and Kanha national parks, noted Bengal tiger sanctuaries, offer guided safaris.');
+	INSERT into city values(4,1,'Jabalpur','Madhya Pradesh, a large state in central India, retains landmarks from eras throughout Indian history. Begun in the 10th century, its Hindu and Jain temples at Khajuraho are renowned for their carvings of erotic scenes, most prominently Kandariya Mahadeva, a temple with more than 800 sculptures. The eastern Bandhavgarh and Kanha national parks, noted Bengal tiger sanctuaries, offer guided safaris.');
+	INSERT into city values(5,2,'Launceston','Tasmania, an isolated island state off Australia’s south coast, is known for its vast, rugged wilderness areas, largely protected within parks and reserves. On the Tasman Peninsula, the 19th-century Port Arthur penal settlement is now an open-air museum. In Hobart, the port capital, Salamanca Places Georgian warehouses now house galleries and boutiques. Its Museum of Old and New Art has a contemporary edge');
+	INSERT into city values(6,2,'hobart','Tasmania, an isolated island state off Australia’s south coast, is known for its vast, rugged wilderness areas, largely protected within parks and reserves. On the Tasman Peninsula, the 19th-century Port Arthur penal settlement is now an open-air museum. In Hobart, the port capital, Salamanca Places Georgian warehouses now house galleries and boutiques. Its Museum of Old and New Art has a contemporary edge');
+	INSERT into city values(7,2,'Melbourne','Victoria is a state in the south-east of Australia. Victoria is Australias most densely populated state and its second-most populous state overall.');
+	INSERT into city values(8,2,'ballarat','Victoria is a state in the south-east of Australia. Victoria is Australias most densely populated state and its second-most populous state overall.');
+	INSERT into city values(9,3,'austin','Texas is a large state in the southern U.S. with deserts, pine forest and the Rio Grande, a river that forms its border with Mexico. In its biggest city, Houston, the Museum of Fine Arts houses works by well-known Impressionist and Renaissance painters, while Space Center Houston offers interactive displays engineered by NASA. Austin, the capital, is known for its eclectic music scene and LBJ Presidential Library.');
+	INSERT into city values(10,3,'dallas','Texas is a large state in the southern U.S. with deserts, pine forest and the Rio Grande, a river that forms its border with Mexico. In its biggest city, Houston, the Museum of Fine Arts houses works by well-known Impressionist and Renaissance painters, while Space Center Houston offers interactive displays engineered by NASA. Austin, the capital, is known for its eclectic music scene and LBJ Presidential Library.');
+	            city
+	INSERT into city values(11,3,'honululu','Hawaii, a U.S. state, is an isolated volcanic archipelago in the Central Pacific. Its islands are renowned for their rugged landscapes of cliffs, waterfalls, tropical foliage and beaches with gold, red, black and even green sands. Of the 6 main islands, Oahu has Hawaii biggest city and capital, Honolulu, home to crescent Waikiki Beach and Pearl Harbors WWII memorials.');
+	INSERT into city values(12,3,'mililani','Hawaii, a U.S. state, is an isolated volcanic archipelago in the Central Pacific. Its islands are renowned for their rugged landscapes of cliffs, waterfalls, tropical foliage and beaches with gold, red, black and even green sands. Of the 6 main islands, Oahu has Hawaii biggest city and capital, Honolulu, home to crescent Waikiki Beach and Pearl Harbors WWII memorials.');
+	INSERT into city values(13,4,'Johannesburg','Johannesburg, South Africas biggest city and capital of Gauteng province, began as a 19th-century gold-mining settlement. Its sprawling Soweto township was once home to Nelson Mandela and Desmond Tutu. Mandelas former residence is now the Mandela House museum. Other Soweto museums that recount the struggle to end segregation include the somber Apartheid Museum and Constitution Hill, a former prison complex.');
+	INSERT into city values(14,4,'randburg','Johannesburg, South Africas biggest city and capital of Gauteng province, began as a 19th-century gold-mining settlement. Its sprawling Soweto township was once home to Nelson Mandela and Desmond Tutu. Mandelas former residence is now the Mandela House museum. Other Soweto museums that recount the struggle to end segregation include the somber Apartheid Museum and Constitution Hill, a former prison complex.');
+	            city
+	INSERT into city values(15,4,'dispatch','Port Elizabeth is a city on Algoa Bay in South Africas Eastern Cape Province. A major port, its also known for its numerous beaches. The Donkin Heritage Trail takes in the Old Hill neighborhoods Victorian landmarks. Coastal boat tours spot whales and rare seabirds, while wildlife reserves outside the metropolitan area are home to elephants, rhinos and other big game.');
+	INSERT into city values(16,4,'Ibhai','Port Elizabeth is a city on Algoa Bay in South Africas Eastern Cape Province. A major port, its also known for its numerous beaches. The Donkin Heritage Trail takes in the Old Hill neighborhoods Victorian landmarks. Coastal boat tours spot whales and rare seabirds, while wildlife reserves outside the metropolitan area are home to elephants, rhinos and other big game.');
+
+	6 Equi Join 
+	
+	It shows non matching rows of both the tables .
+	
+	select 
+		con_name, s_name 
+	from 
+		country, states 
+	where 
+		country.con_code=states.con_code;
+		
+***************
+select 
+		con_name, s_name 
+	from 
+		country, states 
+	where 
+		country.con_code!=states.con_code;
+		
+37. ******************Outer Join*******************
+
+Left Outer joins
+
+select 
+		con_name, s_name 
+	from 
+		country, states 
+	where 
+		country.con_code(+)=states.con_code;	
+		
+right Outer joins
+
+	select 
+		con_name, s_name 
+	from 
+		country, states 
+	where 
+		country.con_code(+)=states.con_code;	
+		
+FULL Outer joins
+
+	select 
+		con_name, s_name 
+	from 
+		country
+	FULL OUTER JOIN  states 
+	ON (country.con_code=states.con_code);	
+		
+38. Cartesian Join  (Join without any where clause)
+
+	select 
+		con_name, s_name 
+	from 
+		country, states 
+		
+39. Self Join  (When parent and child both are present on the same table .It is slowet join among all)
+
+select a.ename, b.ename from employee b, employee a 
+where a.job = b.dob;
+	
+	
+	
+	**************************Multiple table Join***********************
+	
+	
+	select 
+		con_name, s_name ,city_name
+	from 
+		country, states ,city
+	where 
+		country.con_code=states.con_code 
+	and
+		states.s_code=city.s_code
+	and con_name ='India';
